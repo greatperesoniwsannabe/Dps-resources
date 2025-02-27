@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;1,100&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c4e56d066.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles1.css">
+    <title>Economics Grade 12 - Resources</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+        
+            // Load saved theme
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            body.setAttribute('data-theme', currentTheme);
+            themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        
+            // Toggle theme
+            themeToggle.addEventListener('click', () => {
+                const isDark = body.getAttribute('data-theme') === 'dark';
+                body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+                localStorage.setItem('theme', isDark ? 'light' : 'dark');
+                themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            });
+        });
+        </script>
+    
+</head>
+<body>
+<!---NAV BAR-->
+<div class="theme-toggle">
+    <i class="fas fa-moon" id="theme-icon"></i>
+</div>
+<div id="navbar-container"></div> 
+
+<div class="mistake-button">
+    <a href="reportmistake.html" target="_blank">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>Report a problem</span>
+    </a>
+</div>
+
+<!---NAV BAR-->
+
+<div class="tab-menu">
+    <div class="active" data-tab="notes">Notes</div>
+
+    <div data-tab="PYQ">PYQ</div>
+
+    <div data-tab="project-files">Project Files</div>
+</div>
+
+<div class="content-section active" id="notes">
+    
+    
+    <div class="card">
+
+       
+        <div class="card-title">Basic concepts of macroeconomics<br>2025-26</div>
+        <a href="Notes/Grade 12/2025/Economics/macro11_24.pdf">Click here</a>
+    </div>
+
+    <div class="card">
+
+        <a href=""></a>
+        <div class="card-title">We're working hard to gather and organize the best notes for you. Uploads in progress—stay tuned!</div>
+    </div>
+
+    
+
+
+</div>
+
+
+<div class="content-section" id="test-portion">
+    <div class="card">
+
+        <a href=""></a>
+        <div class="card-title">We're working hard to gather and organize the best for you. Uploads in progress—stay tuned!</div>
+    </div>
+</div>
+<div class="content-section" id="PYQ">
+    <div class="card">
+
+        <a href=""></a>
+        <div class="card-title">We're working hard to gather and organize the best question papers for you. Uploads in progress—stay tuned!</div>
+    </div>
+</div>
+<div class="content-section" id="project-files">
+    <div class="card">
+
+        <a href=""></a>
+        <div class="card-title">We're working hard to gather and organize the best project files for you. Uploads in progress—stay tuned!</div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.tab-menu div');
+        const sections = document.querySelectorAll('.content-section');
+        const cards = document.querySelectorAll('.card');
+        const modal = document.getElementById('pdfModal');
+        const pdfViewer = document.getElementById('pdfViewer');
+        const closeModal = document.getElementById('closeModal');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.getAttribute('data-tab');
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+       
+    
+    });
+
+    
+
+</script>
+<script>
+    // Load navbar FIRST before other content
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                const container = document.getElementById('navbar-container');
+                container.innerHTML = data;
+                
+                // Force browser reflow to apply sticky positioning
+                void container.offsetHeight;
+                
+                // Initialize menu functionality
+                const menuIcon = document.getElementById('menu-icon');
+                const megaMenu = document.getElementById('mega-menu');
+                
+                menuIcon.addEventListener('click', () => {
+                    megaMenu.classList.toggle('open');
+                    menuIcon.classList.toggle('fa-times');
+                });
+            });
+    });
+    
+                    </script>
+    
+    
+
+</body>
+
+</html>
+

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS Student Resources</title>
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Liter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c4e56d066.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--light);
+            padding: 1rem 1.1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+
+            z-index: 10000;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-title img {
+            height: 50px;
+            width: auto;
+        }
+
+        .title {
+            font-family: 'Roboto Slab', serif;
+            color: var(--primary);
+            font-size: 1.5rem;
+            color: #1A5D1A;
+            font-weight: 700;
+        }
+
+        /* Mega Menu */
+        .mega-menu {
+            position: fixed;
+            top: 75px;
+            left: 0;
+            right: 0;
+            background: var(--light) !important;
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+            padding: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-height: 70vh;
+            overflow-y: auto;
+            z-index: 9999;
+        }
+        :root {
+    /* Add this missing variable definition */
+    --light: #ffffff; /* Or your preferred background color */
+    --primary:#1A5D1A;
+}
+        .mega-menu.open {
+            display: grid;
+        }
+
+        .menu-column h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-column a {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-column a:hover {
+            color: var(--primary);
+        }
+
+        .menu-columna h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-columna a {
+            display: flexbox;
+            padding: 0.5rem;
+            flex-grow: 1;
+            color: var(--dark);
+            font-size: 1.3rem;
+
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-columna a:hover {
+            color: var(--primary);
+        }
+
+
+        @media (max-width: 480px) {
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-title img {
+            height: 40px;
+            width: auto;
+        }
+
+        .title {
+            font-family: 'Roboto Slab', serif;
+            color: var(--primary);
+            font-size: 1rem;
+            color: #1A5D1A;
+            font-weight: 700;
+        }
+
+        .mega-menu {
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: var(--light) !important;
+
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+            padding: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-height: 70vh;
+            overflow-y: auto;
+            z-index: 9999;
+        }
+        :root {
+    /* Add this missing variable definition */
+    --light: #ffffff; /* Or your preferred background color */
+    --primary:#1A5D1A;
+}
+        .mega-menu.open {
+            display: grid;
+        }
+
+        .menu-column h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-column a {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-column a:hover {
+            color: var(--primary);
+        }
+
+        .menu-columna h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-columna a {
+            display: flexbox;
+            flex-grow: 1;
+            padding: 0.5rem 0;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-column a:hover {
+            color: var(--primary);
+        }
+    }
+
+    .about-hero {
+            background: linear-gradient(rgba(26, 93, 26, 0.9), rgba(26, 93, 26, 0.8)),
+                        url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .founders-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .founder-profile {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .founder-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: #f0f0f0;
+        }
+
+        .core-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .value-card {
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border-left: 4px solid #1A5D1A;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1.about-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h2.section-title {
+            color: #1A5D1A;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+        }
+
+        .disclaimer-box {
+            background: #fff9e6;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid #ffd700;
+            margin: 3rem 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding: 1.5rem;
+            margin-left: 30px;
+            border-left: 3px solid #1A5D1A;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 24px;
+            width: 16px;
+            height: 16px;
+            background: #1A5D1A;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            h1.about-title {
+                font-size: 2rem;
+            }
+            
+            .founders-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo-title">
+                <img src="Main/dps-logo.png" alt="DPS Logo">
+                <a href="index.html" style="text-decoration: none; color: #1e7814;">
+                <div class="title">Delhi Public School-Hyd</div>
+                </a>
+            </div>
+            <i id="menu-icon" class="fas fa-bars"></i>
+        </nav>
+    
+        <div class="mega-menu" id="mega-menu">
+            <div class="menu-column">
+                <h3>Explore</h3>
+                <a href="Aboutus.html">About</a>
+                <a href="#print">Print Services</a>
+                <a href="#read">RE&AD Foundation</a>
+    
+            </div>
+            <div class="menu-column">
+                <h3>Support</h3>
+                <a href="#faq">Volunteer</a>
+                <a href="#donate">Donate</a>
+            </div>
+    
+            <div class="menu-columna">
+                <h3>Contact Us</h3>
+                <a href="#faq"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#donate"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#donate"><i class="fa-solid fa-phone"></i></a>
+            </div>
+           
+        </div>
+
+
+        <section class="about-hero">
+            <h1 class="about-title">Redefining Student Support</h1>
+            <p class="hero-subtext">A peer-powered academic initiative</p>
+        </section>
+    
+        <div class="about-content">
+            <section class="origin-story">
+                <h2 class="section-title">Our Genesis</h2>
+                <p>Launched in 2025-March by Rithvik Eravathri and Aryan Damera Foundation, DPS Student Resources emerged from a simple observation: even in privileged environments, students often struggle to access consistent academic support. Our platform bridges this gap through:</p>
+                
+                <div class="core-values">
+                    <div class="value-card">
+                        <h3>Peer-Validated Content</h3>
+                        <p>Resources curated and verified by top-performing students across grades</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>24/7 Accessibility</h3>
+                        <p>Round-the-clock access to study materials from any device</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Discreet Support</h3>
+                        <p>Anonymous access to maintain student privacy</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="founders">
+                <h2 class="section-title">Initiated By</h2>
+                <div class="founders-card">
+                   
+                    <div class="founder-profile">
+<img src="Main/aryan.jpeg" alt="" class="founder-image">
+                        <h3>Aryan Damera</h3>
+                        <p>Co-founder</p>
+                        <p>"Supporting initiatives that break down academic barriers"</p>
+                    </div>
+                    <div class="founder-profile">
+                        <img src="Main/rithvik.jpg" class="founder-image">
+                        <h3>Rithvik Eravathri</h3>
+                        <p>Co-Founder</p>
+                        <p>"Our mission is to democratize access to quality educational resources"</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="timeline">
+                <h2 class="section-title">Our Evolution</h2>
+                <div class="timeline-item">
+                    <h3>2024-Dec: Concept Development</h3>
+                    <p>Initial research and student needs assessment</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2025-Mar: Platform Launch</h3>
+                    <p>Beta version release with Grade 12 resources</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Future: Expansion Plans</h3>
+                    <p>Customized Resources And Mobile App Development</p>
+                </div>
+            </section>
+    
+          
+    
+            <section class="philosophy">
+                <h2 class="section-title">Our Learning Philosophy</h2>
+                <div class="value-card">
+                    <h3>Three Pillars of Success</h3>
+                    <ul>
+                        <li>Collaborative Knowledge Sharing</li>
+                        <li>Adaptive Learning Methods</li>
+                        <li>Continuous Content Improvement</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    
+        <script>
+                  const menuIcon = document.getElementById('menu-icon');
+        const megaMenu = document.getElementById('mega-menu');
+
+        menuIcon.addEventListener('click', () => {
+            megaMenu.classList.toggle('open');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+        <footer>
+
+            <style>
+                 footer {
+            
+            
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(25, 101, 78);
+            
+            color: white;
+                        padding: 2rem;
+                        padding-bottom: 1rem;
+                        text-align: center;
+            
+            text-align: center;
+            
+            text-transform: uppercase;  font-family: 'Roboto Slab', serif;
+            
+            
+            }
+            footer h6{
+                font-family: "Pacifico", serif;
+                font-size: 20px;
+            }
+            
+            .social-links {
+                        display: flex;
+                        justify-content: center;
+                        gap: 1.5rem;
+                        margin: 1rem 0;
+            
+                    }
+                    .social-links a{
+                        color: white;
+                        font-size: 20px;
+                    }
+            </style>
+            
+            <p>© 2025 DPS-Student Resources. All Rights Reserved.</p>
+            <p>An Initiative By Re&Ad Foundation.</p>
+            
+            
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            
+            </footer>
+        </body>
+        </html>

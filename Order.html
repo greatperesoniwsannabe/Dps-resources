@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles1.css">
+  <title>Print Order Form</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-container {
+  background: white;
+  padding: 1.5rem; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 350px; /* Slightly reduced width */
+  transition: transform 0.2s ease;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-container:hover {
+  transform: translateY(-2px);
+}
+
+h2 {
+  color: #1e293b;
+  font-size: 1.2rem; /* Smaller heading */
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.header-line {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+  border-radius: 2px;
+  margin: 0 auto 1rem;
+}
+
+.contact-inputs, .file-input, select {
+  width: 95%;
+  padding: 0.5rem; /* Reduced padding */
+  margin: 0.3rem 0; /* Less spacing */
+  border: 1.5px solid #e2e8f0;
+  border-radius: 6px; /* Smaller border radius */
+  font-size: 0.8rem; /* Smaller font */
+  transition: all 0.2s ease;
+
+}
+
+.contact-inputs:focus, .file-input:focus, select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px; /* Reduced height */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.6rem; /* Reduced button size */
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.file-section {
+  border: 1.5px dashed #e2e8f0;
+  border-radius: 6px;
+  padding: 0.6rem; /* Reduced padding */
+  margin: 0.8rem 0;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.file-section:hover {
+  border-color: #3b82f6;
+  background: #f8fafc;
+}
+
+.file-list {
+  margin-top: 0.3rem;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 0.3rem 0.6rem; /* Smaller file list */
+  border-radius: 6px;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+.file-input::file-selector-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem; /* Smaller button */
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.file-input::file-selector-button:hover {
+  background: #2563eb;
+}
+
+label{
+  font-size: 0.7rem;
+}
+
+  </style>
+</head>
+<body>
+  
+
+        
+        <!--action="https://api.web3forms.com/submit" method="POST"-->
+  <div class="contact-container">
+    <form action="https://formsubmit.co/338990767bda2202a84fa7e90a00be32" method="POST" enctype="multipart/form-data">
+      
+      <h2>Print Order Request</h2>
+      <div class="header-line"></div>
+      
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+      <input type="tel" name="phone" placeholder="Phone Number" class="contact-inputs" required>
+      <label for="printType">Select Print Type:</label>
+<select name="printType" id="printType" class="contact-inputs" required>
+    <option value="" disabled selected>Choose an option</option>
+    <option value="color">Color Print</option>
+    <option value="black_white">Black & White</option>
+</select>
+<label for="grade">Select your grade</label>
+<select name="grade" id="printType" class="contact-inputs" required>
+  <option value="" disabled selected>Choose an option</option>
+  <option value="grade11">Grade 11</option>
+  <option value="grade12">Grade 12</option>
+</select>
+<label for="section">Select your Section</label>
+<select name="section" id="printType" class="contact-inputs" required>
+  <option value="" disabled selected>Choose an option</option>
+  <option value="a">A</option>
+  <option value="b">B</option>
+  <option value="c">C</option>
+  <option value="d">D</option>
+  <option value="e">E</option>
+  <option value="f">F</option>
+  <option value="g">G</option>
+  <option value="h">H</option>
+  <option value="I">I</option>
+</select>    
+    
+
+      <div class="file-section">
+        <label for="file">Upload Files (PDF/Images):</label>
+        <input type="file" id="file" name="attachment" class="file-input" accept="PDF" required>
+
+        <div class="file-list" id="fileList"></div>
+
+      </div>
+      <button type="submit">Send Order →</button>
+
+    </form>
+  
+
+  <script>
+    const fileInput = document.getElementById('file');
+    const fileList = document.getElementById('fileList');
+    let selectedFiles = [];
+
+    fileInput.addEventListener('change', function(event) {
+      const newFiles = Array.from(event.target.files);
+      selectedFiles = [...selectedFiles, ...newFiles].reduce((acc, file) => {
+        if (!acc.some(f => f.name === file.name)) acc.push(file);
+        return acc;
+      }, []);
+      updateFileList();
+    });
+
+    function updateFileList() {
+      fileList.innerHTML = selectedFiles.map((file, index) => `
+        <div class="file-item">
+          <span>${file.name}</span>
+          <button class="remove-file" onclick="removeFile(${index})">×</button>
+        </div>
+      `).join('');
+    }
+
+    window.removeFile = function(index) {
+      selectedFiles.splice(index, 1);
+      updateFileList();
+    }
+  </script>
+ 
+</body>
+</html>
